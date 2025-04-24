@@ -1,7 +1,7 @@
 def merge_sort(array):
     if len(array) <= 1:
         return
-    
+        
     middle_point = len(array) // 2
     left_part = array[:middle_point]
     right_part = array[middle_point:]
@@ -20,8 +20,8 @@ def merge_sort(array):
         else:
             array[sorted_index] = right_part[right_array_index]
             right_array_index += 1
-        sorted_index += 1
-
+            sorted_index += 1
+    
     while left_array_index < len(left_part):
         array[sorted_index] = left_part[left_array_index]
         left_array_index += 1
@@ -34,9 +34,9 @@ def merge_sort(array):
 
 #test
 if __name__ == '__main__':
-  numbers = [39, 10, 6, 639, 2447, 1, 88, 5]
-  print('Unsorted array: ')
-  print(numbers)
-  merge_sort(numbers)
-  print('Sorted array: ' + str(numbers))
+    numbers = [39, 10, 6, 639, 2447, 1, 88, 5]
+    print('Unsorted array: ')
+    print(numbers)
+    merge_sort(numbers)
+    print('Sorted array: ' + str(numbers))
   
